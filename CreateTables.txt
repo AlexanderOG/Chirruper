@@ -1,0 +1,21 @@
+CREATE TABLE Usuarios (
+    username varchar(50) primary key NOT NULL,
+    nombre varchar(50) NOT NULL,
+    password varchar(50) NOT NULL
+);
+
+CREATE TABLE Seguidores (
+    usuario varchar(50) NOT NULL,
+    sigue_a varchar(50) NOT NULL
+);
+
+INSERT INTO USUARIOS VALUES('alex', 'Alex', '123')
+INSERT INTO USUARIOS VALUES('marco', 'Marco', '123')
+INSERT INTO USUARIOS VALUES('pau', 'Pau', '123')
+
+INSERT INTO SEGUIDORES VALUES('alex', 'pau')
+INSERT INTO SEGUIDORES VALUES('alex', 'marco')
+INSERT INTO SEGUIDORES VALUES('alex', 'alex')
+INSERT INTO SEGUIDORES VALUES('marco', 'pau')
+INSERT INTO SEGUIDORES VALUES('marco', 'alex')
+INSERT INTO SEGUIDORES VALUES('pau', 'alex')
